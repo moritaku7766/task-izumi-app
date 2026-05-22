@@ -1,74 +1,181 @@
-body{
-margin:0;
-font-family:system-ui,sans-serif;
-background:#0f172a;
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #0f172a;
 }
-.app{
-min-height:100vh;
-color:#e5e7eb;
+
+.app {
+  min-height: 100vh;
+  color: #e5e7eb;
 }
-.container{
-max-width:900px;
-margin:auto;
-padding:20px;
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.78);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-.header{
-display:flex;
-justify-content:space-between;
-align-items:center;
+
+/* ヘッダー */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
 }
-.input-area{
-display:grid;
-grid-template-columns:2fr 1fr 1fr auto;
-gap:10px;
-background:#1e293b;
-padding:14px;
-border-radius:14px;
+
+.header h1 {
+  margin: 0;
 }
-input,select,button{
-padding:12px;
-border-radius:10px;
-border:none;
+
+/* 背景画像選択 */
+.background-picker {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
-button{
-background:#3b82f6;
-color:white;
-cursor:pointer;
+
+.background-picker label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-.tabs{
-display:flex;
-gap:10px;
-margin:16px 0;
+
+.background-picker input[type="file"] {
+  max-width: 220px;
 }
-.tabs button{flex:1;}
-ul{padding:0;}
-li{
-list-style:none;
-background:#1e293b;
-margin-bottom:10px;
-padding:14px;
-border-radius:12px;
-border-left:5px solid transparent;
+
+/* 入力エリア */
+.input-area {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 10px;
+  background: #1e293b;
+  padding: 14px;
+  border-radius: 14px;
 }
-.high{border-left-color:#ef4444;}
-.medium{border-left-color:#f59e0b;}
-.low{border-left-color:#22c55e;}
-.done{
-opacity:.5;
-text-decoration:line-through;
+
+/* 入力部品 */
+input,
+select,
+button {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  box-sizing: border-box;
 }
-.row{
-display:flex;
-justify-content:space-between;
-gap:10px;
+
+/* ボタン */
+button {
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
 }
-.meta{
-font-size:12px;
-opacity:.8;
-margin-top:8px;
-display:flex;
-gap:10px;
+
+button:hover {
+  background: #2563eb;
 }
-@media(max-width:700px){
-.input-area{grid-template-columns:1fr;}
+
+/* フィルター */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.tabs button {
+  flex: 1;
+}
+
+/* タスク一覧 */
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  background: #1e293b;
+  margin-bottom: 10px;
+  padding: 14px;
+  border-radius: 12px;
+  border-left: 5px solid transparent;
+}
+
+/* 優先度 */
+.high {
+  border-left-color: #ef4444;
+}
+
+.medium {
+  border-left-color: #f59e0b;
+}
+
+.low {
+  border-left-color: #22c55e;
+}
+
+/* 完了 */
+.done {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+/* タスク行 */
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+/* 補足情報 */
+.meta {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-top: 8px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* スマホ対応 */
+@media (max-width: 700px) {
+  .container {
+    padding: 12px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .input-area {
+    grid-template-columns: 1fr;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .background-picker {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
