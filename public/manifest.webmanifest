@@ -1,6 +1,6 @@
 {
-  "name": "Task App",
-  "short_name": "Task",
+  "name": "IZUMIN App",
+  "short_name": "IZUMIN",
   "description": "タスク管理・カンバン対応アプリ",
   "start_url": "/",
   "scope": "/",
