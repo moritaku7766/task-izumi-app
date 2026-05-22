@@ -322,3 +322,103 @@ textarea {
     width: 100%;
   }
 }
+
+
+/* ===== Aisinカレンダー表示 ===== */
+.calendarView {
+  width: 100%;
+}
+
+.calendarNote {
+  background: rgba(34, 197, 94, .12);
+  border: 1px solid rgba(34, 197, 94, .35);
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.calendarGrid {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.monthCard {
+  min-width: 300px;
+  flex: 0 0 300px;
+  background: rgba(30, 41, 59, .95);
+  border-radius: 16px;
+  padding: 14px;
+  scroll-snap-align: start;
+}
+
+.monthCard h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.weekHeader,
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.weekHeader span {
+  text-align: center;
+  font-size: 12px;
+  opacity: .7;
+}
+
+.day {
+  min-height: 34px;
+  background: rgba(15, 23, 42, .85);
+  border-radius: 8px;
+  padding: 5px;
+  position: relative;
+  font-size: 13px;
+}
+
+.day.holiday {
+  background: rgba(34, 197, 94, .85);
+  color: #052e16;
+  font-weight: 700;
+}
+
+.day.blank {
+  background: transparent;
+}
+
+.taskDot {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  background: #facc15;
+  color: #422006;
+  border-radius: 999px;
+  font-size: 11px;
+  padding: 1px 5px;
+}
+
+/* スマホでは月ごとに横スワイプ */
+@media(max-width: 800px) {
+  .calendarGrid {
+    display: flex;
+    overflow-x: auto;
+    gap: 14px;
+    padding-bottom: 18px;
+  }
+
+  .monthCard {
+    min-width: 86vw;
+    flex: 0 0 86vw;
+  }
+
+  .day {
+    min-height: 38px;
+    font-size: 12px;
+  }
+}
