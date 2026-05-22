@@ -1,0 +1,417 @@
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #0f172a;
+  margin: 0;
+  color: #e5e7eb;
+}
+
+/* 全体 */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* タイトル */
+h1 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* 入力エリア（カード化） */
+.input-area {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  background: #1e293b;
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* 入力系 */
+input, select {
+  flex: 1;
+  min-width: 120px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #0f172a;
+  color: white;
+  outline: none;
+}
+
+/* ボタン */
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+/* リスト */
+ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* タスクカード */
+li {
+  list-style: none;
+  padding: 14px;
+  border-radius: 12px;
+  background: #1e293b;
+  cursor: pointer;
+  transition: 0.2s;
+  border-left: 5px solid transparent;
+}
+
+li:hover {
+  transform: translateY(-2px);
+}
+
+/* 完了 */
+li.done {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+/* 優先度 */
+li.high {
+  border-left-color: #ef4444;
+}
+
+li.medium {
+  border-left-color: #f59e0b;
+}
+
+li.low {
+  border-left-color: #22c55e;
+}
+
+/* メタ情報 */
+.meta {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-top: 6px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* 📱 スマホ対応 */
+@media (max-width: 600px) {
+  .container {
+    padding: 12px;
+  }
+
+  .input-area {
+    flex-direction: column;
+  }
+
+  input, select, button {
+    width: 100%;
+  }
+
+  li {
+    padding: 16px;
+  }
+}
+body {
+  font-family: system-ui, sans-serif;
+  background: #0b1220;
+  margin: 0;
+  color: white;
+}
+
+/* アプリ全体 */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* タイトル（アプリヘッダー） */
+h1 {
+  font-size: 20px;
+  text-align: center;
+  margin: 10px 0 20px;
+}
+
+/* 入力カード */
+.input-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #111a2e;
+  padding: 12px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+/* 入力系 */
+input, select {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #0b1220;
+  color: white;
+}
+
+/* ボタン */
+button {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  font-weight: bold;
+}
+
+/* タブUI（重要） */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0 20px;
+}
+
+.tabs button {
+  flex: 1;
+  background: #1f2a44;
+  font-size: 13px;
+}
+
+.tabs button:hover {
+  background: #334155;
+}
+
+/* タスクカード */
+ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+li {
+  list-style: none;
+  background: #111a2e;
+  padding: 14px;
+  border-radius: 14px;
+  border-left: 5px solid transparent;
+  transition: 0.2s;
+}
+
+/* 押しやすいUI */
+li:active {
+  transform: scale(0.98);
+}
+
+/* 完了 */
+li.done {
+  opacity: 0.4;
+  text-decoration: line-through;
+}
+
+/* 優先度 */
+li.high {
+  border-left-color: #ef4444;
+}
+
+li.medium {
+  border-left-color: #f59e0b;
+}
+
+li.low {
+  border-left-color: #22c55e;
+}
+
+/* メタ情報 */
+.meta {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-top: 6px;
+}
+
+/* 📱 スマホ最適化 */
+@media (max-width: 600px) {
+  .container {
+    padding: 12px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+.tabs {
+  position: relative;
+  display: flex;
+  background: #111a2e;
+  border-radius: 12px;
+  padding: 4px;
+  margin: 12px 0 20px;
+  overflow: hidden;
+}
+
+/* ボタン */
+.tabs button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  color: #aaa;
+  z-index: 2;
+  cursor: pointer;
+  transition: 0.2s;
+  border-radius: 10px;
+}
+
+/* 選択中 */
+.tabs button.active {
+  color: white;
+}
+
+/* ホバー */
+.tabs button:hover {
+  color: white;
+}
+
+/* スライド背景 */
+.tab-slider {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  width: 33.3%;
+  background: #3b82f6;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  z-index: 1;
+}
+
+/* スライド位置 */
+.tab-slider.all {
+  left: 4px;
+}
+
+.tab-slider.active {
+  left: 33.3%;
+}
+
+.tab-slider.done {
+  left: 66.6%;
+}
+.sidebar {
+  width: 200px;
+  background: #0f172a;
+  padding: 14px;
+  border-right: 1px solid #1e293b;
+}
+
+.sidebar h3 {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+/* フォルダ本体 */
+.folder {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 12px;
+  margin: 6px 0;
+  border-radius: 10px;
+
+  cursor: pointer;
+  color: #cbd5e1;
+
+  transition: all 0.2s ease;
+}
+
+/* ホバー */
+.folder:hover {
+  background: #1e293b;
+  transform: translateX(3px);
+  color: white;
+}
+
+/* 選択中（超重要） */
+.folder.active {
+  background: #3b82f6;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(59,130,246,0.3);
+}
+
+/* アイコンっぽく見せる */
+.folder::before {
+  content: "📁";
+  font-size: 14px;
+}
+.folder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.folder-count {
+  font-size: 12px;
+  opacity: 0.7;
+  background: #1e293b;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+.folder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-folder {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+}
+
+.delete-folder:hover {
+  color: red;
+}
+.trash {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #1e293b;
+}
+
+.trash-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+  margin-top: 6px;
+  background: #0f172a;
+  border-radius: 8px;
+}
+
+.trash-item button {
+  background: #3b82f6;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.trash-empty {
+  font-size: 12px;
+  opacity: 0.5;
+}
