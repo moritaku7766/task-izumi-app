@@ -1,7 +1,6 @@
 {
   "name": "業務管理アプリ",
   "short_name": "業務管理",
-  "description": "タスク管理・カンバン・メモ・背景変更対応の業務管理アプリ",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
