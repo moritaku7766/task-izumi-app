@@ -1,6 +1,7 @@
 {
-  "name": "業務管理アプリ",
-  "short_name": "業務管理",
+  "name": "Task App",
+  "short_name": "Task",
+  "description": "タスク管理・カンバン対応アプリ",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -8,9 +9,9 @@
   "theme_color": "#2563eb",
   "icons": [
     {
-      "src": "/icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ]
