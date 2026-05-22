@@ -1,4 +1,4 @@
-const CACHE_NAME = "task-app-v8";
+const CACHE_NAME = "IZUMIN-app-v8";
 
 self.addEventListener("install", (event) => {
   self.skipWaiting();
